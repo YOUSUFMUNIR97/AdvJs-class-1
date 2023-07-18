@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Document</title>
+    <script src="app.js"></script>
+    <title>AdvJs class 1t</title>
 </head>
 
 <body>
@@ -53,140 +54,6 @@
 
 
 </body>
-<script>
-    
-    var a = {
-        mobiles: {
-            Samsung: {
-                SamsungA10: {
-                    name: "Samsung A10",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "13",
-                    price: "22,000 PKR"
-                },
-                SamsungA20: {
-                    name: "Samsung A20",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "18",
-                    price: "28,000"
-                },
-                SamsungA30: {
-                    name: "Samsung A30",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "25",
-                    price: "29,000"
-                }
-            },
-            IPhone: {
-                IPhone11: {
-                    name: "IPhone11",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "12",
-                    price: "100,000"
-                },
-                IPhone12: {
-                    name: "IPhone12",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "12",
-                    price: "150,000"
-                },
-                IPhone13: {
-                    name: "IPhone13",
-                    ram: "6gb",
-                    rom: "128gb",
-                    camera: "24",
-                    price: "200,000"
-                }
-            },
-            Oppo: {
-                OppoV20: {
-                    name: "OppoV20",
-                    ram: "8gb",
-                    rom: "128gb",
-                    camera: "64",
-                    price: "54,999"
-                },
-                OppoF19: {
-                    name: "OppoF19",
-                    ram: "6gb",
-                    rom: "128gb",
-                    camera: "48",
-                    price: "36,999"
-                },
-                OppoF11: {
-                    name: "OppoF11",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "48",
-                    price: "35,999"
-                }
-            },
-            Vivo: {
-                VivoY20: {
-                    name: "VivoY20",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "13",
-                    price: "26,999"
-                },
-                VivoY21: {
-                    name: "VivoY21",
-                    ram: "4gb",
-                    rom: "64gb",
-                    camera: "13",
-                    price: "43,999"
-                },
-                VivoY55: {
-                    name: "VivoY55",
-                    ram: "8gb",
-                    rom: "128gb",
-                    camera: "50",
-                    price: "64,999"
-                }
-            }
-        }
-    }
 
-
-    function getData() {
-        console.log(a);
-        var companys = document.getElementById("Company");
-        console.log(companys);
-var cvalue = companys.value;
-console.log(cvalue);
-var Models = document.getElementById("Model");
-console.log(Models);
-var mvalue = Models.value;
-console.log(mvalue);
-
-
-    
-    var mobilesp = (JSON.stringify(a.mobiles[cvalue][mvalue]));
-    console.log(JSON.stringify(mobilesp));
-
-    if(mobilesp == undefined){
-        document.write("<h1> Wrong Selection </h1>");
-    }else{
-        document.write("<h1> Your Mobile Specificaions Are: </h1>" + "<br>" + mobilesp);
-
-    }    
-    
-    
-    }
-
-    // // var company = "Samsung"
-    // // var Model = "SamsungA20"
-
-    // var Model = prompt("Which Model")
-
- 
-
-// alert(a.mobiles[company][Model])
-</script>
 
 </html>

@@ -14,27 +14,29 @@
     <form>
         <div class="form-group">
             <label for="company">Select the Company from the list</label>
-            <select class="form-control" id="ddlViewBy">
+            <select class="form-control" id="Company">
                 <option value="Samsung" selected="selected">Samsung</option>
                 <option value="Vivo">Vivo</option>
                 <option value="IPhone">IPhone</option>
                 <option value="Oppo">Oppo</option>
-                <option value="Infinix">Infinix</option>
             </select>
         </div>
         <br><br>
         <div class="form-group">
             <label for="Model">Select the Model from the list</label>
-            <select class="form-control">
-                <option id="Model">SamsungA10</option>
-                <option id="Model">SamsungA20</option>
-                <option id="Model">SamsungA30</option>
-                <option id="Model">VivoY20</option>
-                <option id="Model">VivoY21</option>
-                <option id="Model">VivoY55</option>
-                <option id="Model">IPhone11</option>
-                <option id="Model">IPhone12</option>
-                <option id="Model">IPhone13</option>
+            <select class="form-control" id="Model">
+                <option value="SamsungA10" selected="selected">SamsungA10</option>
+                <option value="SamsungA20">SamsungA20</option>
+                <option value="SamsungA30">SamsungA30</option>
+                <option value="VivoY20">VivoY20</option>
+                <option value="VivoY21">VivoY21</option>
+                <option value="VivoY55">VivoY55</option>
+                <option value="OppoV20">OppoV20</option>
+                <option value="OppoF11">OppoF11</option>
+                <option value="OppoF19">OppoF19</option>
+                <option value="IPhone11">IPhone11</option>
+                <option value="IPhone12">IPhone12</option>
+                <option value="IPhone13">IPhone13</option>
             </select>
             <br><br>
 
@@ -151,50 +153,30 @@
     }
 
 
-    // var companys = document.getElementById('Company').innerHTML;
-    var Models = document.getElementById('Model').innerHTML;
-   
-    // console.log((companys));
-    // document.write(companys);
-        // console.log(String(companys));
-        // console.log(typeof(companys));
-        document.write("<br>");
-        console.log((Models));
-    document.write(Models);
-        console.log(String(Models));
-        console.log(typeof(Models));
-
-
     function getData() {
-        var e = document.getElementById("ddlViewBy");
-        console.log(e);
-var value = e.value;
-console.log(value);
-// var text = e.options[e.selectedIndex].text;
-// console.log(text); 
-        // var value = companys.value;
-    // console.log(value);
-    // var text = value.options[value.selectedIndex].text;
-    //    var company = prompt("Mobile")
-    // var Model = prompt("Model")
+        console.log(a);
+        var companys = document.getElementById("Company");
+        console.log(companys);
+var cvalue = companys.value;
+console.log(cvalue);
+var Models = document.getElementById("Model");
+console.log(Models);
+var mvalue = Models.value;
+console.log(mvalue);
+
 
     
+    var mobilesp = (JSON.stringify(a.mobiles[cvalue][mvalue]));
+    console.log(JSON.stringify(mobilesp));
 
-    // var mobilesp = (JSON.stringify(a.mobiles[companys][Models]));
-    // console.log(typeof (mobilesp));
-    // alert((mobilesp));
-    // console.log(toString(mobilesp));
-    // console.log(typeof (mobilesp));
-    // document.write(mobilesp);
-    // var companys = document.getElementById('Company');
-    // var Models = document.getElementById('Model');
-    //     console.log(typeof (companys));
-    //     console.log(JSON.stringify(Models));
-    //     console.log(a);
-    //     console.log(typeof (Models));
-    //     var mobilesp = (JSON.stringify(a.mobiles[companys][Models]));
-    //     console.log(typeof (mobilesp));
-    //     alert(JSON.stringify(mobilesp));
+    if(mobilesp == undefined){
+        document.write("<h1> Wrong Selection </h1>");
+    }else{
+        document.write("<h1> Your Mobile Specificaions Are: </h1>" + "<br>" + mobilesp);
+
+    }    
+    
+    
     }
 
     // // var company = "Samsung"

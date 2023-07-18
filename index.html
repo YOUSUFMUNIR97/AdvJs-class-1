@@ -14,13 +14,12 @@
     <form>
         <div class="form-group">
             <label for="company">Select the Company from the list</label>
-            <select class="form-control">
-                <option>Select the Company</option>
-                <option id="Company">Samsung</option>
-                <option id="Company">Vivo</option>
-                <option id="Company">IPhone</option>
-                <option id="Company">Oppo</option>
-                <option id="Company">Infinix</option>
+            <select class="form-control" id="ddlViewBy">
+                <option value="Samsung" selected="selected">Samsung</option>
+                <option value="Vivo">Vivo</option>
+                <option value="IPhone">IPhone</option>
+                <option value="Oppo">Oppo</option>
+                <option value="Infinix">Infinix</option>
             </select>
         </div>
         <br><br>
@@ -38,6 +37,13 @@
                 <option id="Model">IPhone13</option>
             </select>
             <br><br>
+
+            <!-- <select id="ddlViewBy">
+                <option value="1">test1</option>
+                <option value="2" selected="selected">test2</option>
+                <option value="3">test3</option>
+              </select> -->
+
             <div>
                 <button type="button" class="btn btn-secondary" onclick="getData()">Submit</button>
             </div>
@@ -145,12 +151,13 @@
     }
 
 
-    var companys = document.getElementById('Company').innerHTML;
+    // var companys = document.getElementById('Company').innerHTML;
     var Models = document.getElementById('Model').innerHTML;
-    console.log((companys));
-    document.write(companys);
-        console.log(String(companys));
-        console.log(typeof(companys));
+   
+    // console.log((companys));
+    // document.write(companys);
+        // console.log(String(companys));
+        // console.log(typeof(companys));
         document.write("<br>");
         console.log((Models));
     document.write(Models);
@@ -159,19 +166,26 @@
 
 
     function getData() {
-    
-
+        var e = document.getElementById("ddlViewBy");
+        console.log(e);
+var value = e.value;
+console.log(value);
+// var text = e.options[e.selectedIndex].text;
+// console.log(text); 
+        // var value = companys.value;
+    // console.log(value);
+    // var text = value.options[value.selectedIndex].text;
     //    var company = prompt("Mobile")
     // var Model = prompt("Model")
 
     
 
-    var mobilesp = (JSON.stringify(a.mobiles[companys][Models]));
-    console.log(typeof (mobilesp));
-    alert((mobilesp));
+    // var mobilesp = (JSON.stringify(a.mobiles[companys][Models]));
+    // console.log(typeof (mobilesp));
+    // alert((mobilesp));
     // console.log(toString(mobilesp));
-    console.log(typeof (mobilesp));
-    document.write(mobilesp);
+    // console.log(typeof (mobilesp));
+    // document.write(mobilesp);
     // var companys = document.getElementById('Company');
     // var Models = document.getElementById('Model');
     //     console.log(typeof (companys));

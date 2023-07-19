@@ -1,6 +1,4 @@
-
-    
-    var a = {
+var a = {
         mobiles: {
             Samsung: {
                 SamsungA10: {
@@ -114,7 +112,7 @@ console.log(mvalue);
     var mobilesp = (JSON.stringify(a.mobiles[cvalue][mvalue]));
     console.log(JSON.stringify(mobilesp));
 
-    if(mobilesp == undefined){
+    if(!mobilesp){
         document.write("<h1> Wrong Selection </h1>");
     }else{
         document.write("<h1> Your Mobile Specificaions Are: </h1>" + "<br>" + mobilesp);
